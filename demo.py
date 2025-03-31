@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 from glob import glob
 
+os.environ['KMP_DUPLICATE_LIB_OK'] = 'TRUE'
 
 def single_pic_proc(image_file):
     image = np.array(Image.open(image_file).convert('RGB'))
